@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+			<!-- bean definitions here -->
+			
+	<!-- 	<bean class="dao_impliment_class.AccountDaoImt" name="accountDao" autowire="byType">
+		</bean>-->
+		
+		<bean class="pojosClasses.Account" name="account1" autowire="byType" scope="singleton">
+		<property name="acNo" value="123"/>
+		<property name="acType" value="saving"/>
+		<property name="balance" value="13546"/>
+		</bean>
+
+		<bean class="pojosClasses.Account" name="account2" autowire="byType" scope="singleton">
+		<property name="acNo" value="321"/>
+		<property name="acType" value="pata ni"/>
+		<property name="balance" value="564891"/>
+		</bean>
+		
+		
+		<bean class="pojosClasses.Account" name="account3" autowire="byType" scope="singleton">
+		<property name="acNo" value="231"/>
+		<property name="acType" value="current"/>
+		<property name="balance" value="87942"/>
+		</bean>
+		
+		<bean class="dao_impliment_class.AccountDaoImt" name="acDaoImt" autowire="byType">
+		</bean>        
+</beans>
+
+
+	
